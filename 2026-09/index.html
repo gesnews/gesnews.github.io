@@ -654,6 +654,21 @@ background: var(--band);
 line-height: 1.3;
 font-weight: 700;
 color: var(--ink);
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+flex-wrap: wrap;
+gap: 0.3rem 0.6rem;
+}
+
+.item-tag {
+font-size: 0.68rem;
+font-weight: 700;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color: var(--accent);
+white-space: nowrap;
+flex-shrink: 0;
 }
 
 #closing-soon h3 { background: var(--band-urgent); }
@@ -761,14 +776,14 @@ a { color: var(--ink); text-decoration: none; }
 <section id="from-the-editor" class="level2">
 <h2 class="anchored">From the editor</h2>
 <p>This is the first issue of GS-NEWS, a monthly letter for students in Geology, Environment and Sustainability (GES). It carries one kind of thing: what you can apply for, attend, or take next. Deadlines, internships, scholarships, field trips, talks, courses, and the work students in this department are doing.</p>
-<p>It comes out once a month during the academic year, September to May. Every deadline here was checked on 17 September 2026, against the own page of the organisation offering it. If a deadline has not been posted yet for next year, this letter says so instead of printing last year’s date, which would send you to a closed application.</p>
+<p>It comes out once a month during the academic year, September to May. Every deadline here was checked on 17 September 2026, against the own page of the organisation offering it. If a deadline has not been posted yet for next year, as with the Lamont-Doherty summer internship and the regional geology meeting in March (both below), this letter says so instead of printing last year’s date, which would send you to a closed application.</p>
 <p>One thing worth knowing before you read on: some scholarships are not applied for directly. The university nominates you, which means there is an internal Hofstra deadline months before the national one. Those are marked below.</p>
 <p>To keep receiving GS-NEWS, <a href="https://forms.gle/6aEiKjStMLBgyqhNA">subscribe here</a>. To write for it, see the last section.</p>
 </section>
 <section id="closing-soon" class="level2">
 <h2 class="anchored">Closing soon</h2>
 <section id="paid-research-at-brookhaven" class="level3 item lead">
-<h3 class="item lead anchored">Paid Research at Brookhaven</h3>
+<h3 class="item lead anchored">Paid Research at Brookhaven<span class="item-tag">Internship</span></h3>
 <p><em>Science Undergraduate Laboratory Internships (SULI), spring 2027</em><br>
 <strong>Closes 30 September, 5:00 PM Eastern Time</strong></p>
 <p><span class="dropcap">A</span>paid, full-time research internship for one semester at a national laboratory, working beside a staff scientist. Brookhaven National Laboratory in Upton is one of the seventeen participating laboratories, so this one is reachable without leaving Long Island. It is run by the Office of Science of the United States Department of Energy (DOE), and it pays a stipend with housing and travel allowances.</p>
@@ -776,7 +791,7 @@ a { color: var(--ink); text-decoration: none; }
 <p>Apply: <a href="https://science.osti.gov/wdts/suli">science.osti.gov/wdts/suli</a></p>
 </section>
 <section id="fund-your-own-research" class="level3 item">
-<h3 class="item anchored">Fund Your Own Research</h3>
+<h3 class="item anchored">Fund Your Own Research<span class="item-tag">Grant</span></h3>
 <p><em>Sigma Xi Grants in Aid of Research</em><br>
 <strong>Closes 1 October</strong></p>
 <p>A small grant you apply for yourself, to pay the real costs of your own research: field travel, laboratory analyses, supplies. Sigma Xi is a scientific research society; it is open to any undergraduate or graduate student in a degree programme, and you do not need to be a member of Sigma Xi to apply.</p>
@@ -791,13 +806,13 @@ a { color: var(--ink); text-decoration: none; }
 <section id="on-and-near-campus" class="level2">
 <h2 class="anchored">On and near campus</h2>
 <section id="skip-the-car-for-a-day" class="level3 item">
-<h3 class="item anchored">Skip the Car for a Day</h3>
+<h3 class="item anchored">Skip the Car for a Day<span class="item-tag">Event</span></h3>
 <p><em>Car Free Day Long Island</em><br>
 <strong>Monday 22 September</strong></p>
 <p>Pledge to travel without a car for one day. Dr. Bennington plans to ride his bicycle to campus that day.</p>
 </section>
 <section id="real-jobs-real-alumni" class="level3 item">
-<h3 class="item anchored">Real Jobs, Real Alumni</h3>
+<h3 class="item anchored">Real Jobs, Real Alumni<span class="item-tag">Event</span></h3>
 <p><em>Alumni career talks in GEOL 005</em><br>
 <strong>15 and 22 October</strong></p>
 <p>Three graduates of this department come back to talk about the careers they built:</p>
@@ -811,7 +826,7 @@ a { color: var(--ink); text-decoration: none; }
 <p>Gittleson 162, and on Zoom. [Whether a student outside GEOL 005 may attend is not confirmed yet; watch the next issue for an answer.]</p>
 </section>
 <section id="free-dinner-real-geologists" class="level3 item">
-<h3 class="item anchored">Free Dinner, Real Geologists</h3>
+<h3 class="item anchored">Free Dinner, Real Geologists<span class="item-tag">Event</span></h3>
 <p><em>Long Island Association of Professional Geologists</em><br>
 <strong>Next meeting in the winter</strong></p>
 <p>LIAPG holds a dinner meeting every quarter, with talks and panel discussions on working in environmental and geotechnical consulting. The association sponsors five students at each meeting, so those five eat for free, and the department can usually arrange a van from campus. The September meeting has passed. The next one is in the winter, and Dr. Bennington chooses who goes.</p>
@@ -826,7 +841,7 @@ a { color: var(--ink); text-decoration: none; }
 <h2 class="anchored">Looking to next summer</h2>
 <p>The summer positions below are decided in the winter, but the application work starts now.</p>
 <section id="two-years-of-tuition-paid" class="level3 item">
-<h3 class="item anchored">Two Years of Tuition, Paid</h3>
+<h3 class="item anchored">Two Years of Tuition, Paid<span class="item-tag">Scholarship</span></h3>
 <p><em>Hollings Undergraduate Scholarship</em><br>
 <strong>Closes 31 January 2027, 11:59 PM Eastern Time</strong></p>
 <p><span class="dropcap">T</span>wo years of tuition support, up to $9,500 each year, and a paid ten-week research internship at a facility of the National Oceanic and Atmospheric Administration (NOAA).</p>
@@ -835,7 +850,7 @@ a { color: var(--ink); text-decoration: none; }
 <p>Apply: <a href="https://www.noaa.gov/office-education/hollings-scholarship/prospective">noaa.gov/office-education/hollings-scholarship</a></p>
 </section>
 <section id="summer-job-national-park" class="level3 item">
-<h3 class="item anchored">Summer Job: National Park</h3>
+<h3 class="item anchored">Summer Job: National Park<span class="item-tag">Internship</span></h3>
 <p><em>Scientists in Parks, summer 2027</em><br>
 <strong>Applications open in mid-December</strong></p>
 <p>A paid placement in a national park doing real resource work: geological mapping, monitoring, geographic information systems, and explaining the park’s science to visitors. It is run by the National Park Service with the Geological Society of America (GSA).</p>
@@ -843,7 +858,7 @@ a { color: var(--ink); text-decoration: none; }
 <p>Details: <a href="https://www.scientistsinparks.org/how-to-apply">scientistsinparks.org/how-to-apply</a></p>
 </section>
 <section id="paid-research-an-hour-away" class="level3 item">
-<h3 class="item anchored">Paid Research, an Hour Away</h3>
+<h3 class="item anchored">Paid Research, an Hour Away<span class="item-tag">Internship</span></h3>
 <p><em>Lamont-Doherty Summer Intern Program</em><br>
 <strong>2027 dates not posted yet. Watch from early January</strong></p>
 <p>Ten weeks of paid summer research in Earth, ocean, atmospheric and environmental science at Lamont-Doherty Earth Observatory in Palisades, New York, about an hour from campus. The 2026 round paid a $7,000 stipend with free accommodation in a hall of residence.</p>
@@ -852,7 +867,7 @@ a { color: var(--ink); text-decoration: none; }
 <p>Details: <a href="https://lamont.columbia.edu/education-outreach/student-summer-opportunities-intern-programs">lamont.columbia.edu</a></p>
 </section>
 <section id="hofstras-top-science-scholarship" class="level3 item">
-<h3 class="item anchored">Hofstra’s Top Science Scholarship</h3>
+<h3 class="item anchored">Hofstra’s Top Science Scholarship<span class="item-tag">Scholarship</span></h3>
 <p><em>Barry Goldwater Scholarship</em><br>
 <strong>Hofstra nominates. National deadline 29 January 2027</strong></p>
 <p>The main national scholarship for undergraduates who intend to become research scientists, open to second- and third-year students in the natural sciences, mathematics and engineering.</p>
@@ -863,7 +878,7 @@ a { color: var(--ink); text-decoration: none; }
 <p>Ask Dr. Smylie about the internal process, or read Hofstra’s own listing: <a href="https://sites.google.com/hofstra.edu/prestigious-scholarships/scholarship-listings/stem">sites.google.com/hofstra.edu/prestigious-scholarships</a></p>
 </section>
 <section id="three-years-fully-funded" class="level3 item">
-<h3 class="item anchored">Three Years, Fully Funded</h3>
+<h3 class="item anchored">Three Years, Fully Funded<span class="item-tag">Fellowship</span></h3>
 <p><em>For final-year students: NSF Graduate Research Fellowship Program (GRFP)</em><br>
 <strong>Geosciences closes 23 October 2026, 8:00 PM Eastern Time</strong></p>
 <p>Three years of funded graduate study, applied for in your final year of college, before you have been admitted anywhere. It pays a $37,000 stipend each year and $16,000 towards the cost of education, for three years that you can use at any point within a five-year window of graduate study.</p>
@@ -874,7 +889,7 @@ a { color: var(--ink); text-decoration: none; }
 <section id="not-open-yet-worth-watching" class="level2">
 <h2 class="anchored">Not open yet, worth watching</h2>
 <section id="give-your-first-talk" class="level3 item">
-<h3 class="item anchored">Give Your First Talk</h3>
+<h3 class="item anchored">Give Your First Talk<span class="item-tag">Conference</span></h3>
 <p><em>GSA Northeastern Section Meeting</em><br>
 <strong>Saratoga Springs, New York, 11 to 14 March 2027. Abstract deadline not posted yet</strong></p>
 <p><span class="dropcap">T</span>his is the regional geology conference, and it is where an undergraduate gives a first poster or talk to a real scientific audience. Undergraduate posters are common there, and welcome.</p>
@@ -885,7 +900,7 @@ a { color: var(--ink); text-decoration: none; }
 <p>Watch: <a href="https://www.geosociety.org/events/section-meetings/northeastern">geosociety.org/events/section-meetings/northeastern</a></p>
 </section>
 <section id="for-your-project" class="level3 item">
-<h3 class="item anchored">$2,000 for Your Project</h3>
+<h3 class="item anchored">$2,000 for Your Project<span class="item-tag">Grant</span></h3>
 <p><em>Stephen G. Pollock Undergraduate Student Research Grants</em><br>
 <strong>Closes 10 April</strong></p>
 <p>Up to $2,000 for your own undergraduate research project, from the Northeastern Section of GSA, which covers New York. It is for second- and third-year students who are student members of GSA, and it expects the results to be presented at a GSA meeting.</p>
