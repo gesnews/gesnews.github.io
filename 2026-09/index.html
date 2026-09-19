@@ -517,22 +517,32 @@ padding: 1.5rem 1.1rem 2.5rem;
 }
 
 .masthead { margin-bottom: 2.25rem; }
-h1.nameplate {
+
+.nameplate-row {
 font-size: clamp(2.75rem, 12vw, 4.25rem);
-line-height: 0.95;
-letter-spacing: 0.10em;
-font-weight: 700;
-text-align: center;
-margin: 0.5rem 0 0.35rem;
-border: none;
-padding: 0;
 display: flex;
 align-items: center;
 justify-content: center;
 gap: 0.24em;
+margin: 0.5rem 0 0.85rem; 
+}
+.nameplate-row p { margin: 0; } 
+.nameplate-stack {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+h1.nameplate {
+font-size: inherit;
+line-height: 0.95;
+letter-spacing: 0.10em;
+font-weight: 700;
+margin: 0;
+border: none;
+padding: 0;
 }
 
-h1.nameplate img.namemark {
+.namemark {
 height: 0.92em;
 width: auto;
 flex-shrink: 0;
@@ -540,13 +550,11 @@ flex-shrink: 0;
 margin-left: 0.10em;
 }
 .subname {
-text-align: center;
 letter-spacing: 0.30em;
 font-size: 0.8rem;
 text-transform: uppercase;
 color: var(--muted);
-margin-bottom: 0.85rem;
-padding-left: 0.30em; 
+margin: 0;
 }
 .issueline {
 border-top: 2.5px solid var(--rule);
@@ -693,7 +701,7 @@ margin: 0;
 padding: 0;
 border: none;
 }
-h1.nameplate { font-size: 40pt; }
+.nameplate-row { font-size: 40pt; }
 h2 { margin-top: 1.4rem; page-break-after: avoid; }
 h3 { page-break-after: avoid; color: var(--ink); }
 h3.item + p { page-break-after: avoid; }
@@ -727,10 +735,15 @@ a { color: var(--ink); text-decoration: none; }
 
 
 
-<section id="gs-news" class="level1 nameplate masthead">
-<h1 class="nameplate"><img role="img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+CiAgPHRpdGxlPkdTLU5FV1MgbWFyazogYSBzZWlzbW9ncmFwaCB0cmFjZSBpbnNpZGUgYSBtYWduaWZ5aW5nIGdsYXNzPC90aXRsZT4KICA8bGluZSB4MT0iNjYiIHkxPSI2NiIgeDI9IjgwIiB5Mj0iODAiIHN0cm9rZT0iIzE2MTkxZCIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI0NiIgY3k9IjQ2IiByPSIyOCIgZmlsbD0iI2ZkZmNmYSIgc3Ryb2tlPSIjMTYxOTFkIiBzdHJva2Utd2lkdGg9IjMuNSIvPgogIDxwYXRoIGQ9Ik0yMiw0NiBMMjgsNDYgTDMzLDMzIEw0MCw2MCBMNDYsMjQgTDUyLDYwIEw1OSwzMyBMNjQsNDYgTDcwLDQ2IgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdhMWYxZiIgc3Ryb2tlLXdpZHRoPSIzIgogICAgICAgIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K" class="namemark img-fluid"> GS-NEWS</h1>
+<div class="masthead">
+<div class="nameplate-row">
+<p><img role="img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+CiAgPHRpdGxlPkdTLU5FV1MgbWFyazogYSBzZWlzbW9ncmFwaCB0cmFjZSBpbnNpZGUgYSBtYWduaWZ5aW5nIGdsYXNzPC90aXRsZT4KICA8bGluZSB4MT0iNjYiIHkxPSI2NiIgeDI9IjgwIiB5Mj0iODAiIHN0cm9rZT0iIzE2MTkxZCIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI0NiIgY3k9IjQ2IiByPSIyOCIgZmlsbD0iI2ZkZmNmYSIgc3Ryb2tlPSIjMTYxOTFkIiBzdHJva2Utd2lkdGg9IjMuNSIvPgogIDxwYXRoIGQ9Ik0yMiw0NiBMMjgsNDYgTDMzLDMzIEw0MCw2MCBMNDYsMjQgTDUyLDYwIEw1OSwzMyBMNjQsNDYgTDcwLDQ2IgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdhMWYxZiIgc3Ryb2tlLXdpZHRoPSIzIgogICAgICAgIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K" class="namemark img-fluid"></p>
+<section id="gs-news" class="level1 nameplate nameplate-stack">
+<h1 class="nameplate">GS-NEWS</h1>
 <div class="subname">
 <p>GEOSCIENCE &amp; SUSTAINABILITY NEWS</p>
+</div>
+</section>
 </div>
 <div class="issueline">
 <p><span class="issue-left">Issue 1 · September 2026</span><span class="issue-right">Hofstra University · Geology, Environment and Sustainability</span></p>
@@ -738,7 +751,7 @@ a { color: var(--ink); text-decoration: none; }
 <div class="tagline">
 <p>What you can apply for, attend, or take next.</p>
 </div>
-</section>
+</div>
 <div class="glance-box">
 <div class="glance-label">
 <p>Nearest deadline</p>
