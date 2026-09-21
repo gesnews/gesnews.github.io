@@ -518,19 +518,24 @@ padding: 1.5rem 1.1rem 2.5rem;
 
 .masthead { margin-bottom: 2.25rem; }
 
+
 .nameplate-row {
-font-size: clamp(2.75rem, 12vw, 4.25rem);
+font-size: clamp(2rem, 9vw, 4.25rem);
 display: flex;
-align-items: center;
 justify-content: center;
-gap: 0.24em;
-margin: 0.5rem 0 0.85rem; 
+margin: 0.5rem 0 0.35rem;
 }
 .nameplate-row p { margin: 0; } 
 .nameplate-stack {
-display: flex;
-flex-direction: column;
-align-items: center;
+position: relative;
+}
+.nameplate-stack > p { 
+position: absolute;
+right: 100%;
+top: 50%;
+transform: translateY(-50%);
+margin: 0 0.22em 0 0;
+line-height: 0;
 }
 h1.nameplate {
 font-size: inherit;
@@ -550,11 +555,13 @@ flex-shrink: 0;
 margin-left: 0.10em;
 }
 .subname {
-letter-spacing: 0.30em;
-font-size: 0.8rem;
+letter-spacing: 0.22em;
+font-size: 0.78rem;
+line-height: 1.5;
+text-align: center;
 text-transform: uppercase;
 color: var(--muted);
-margin: 0;
+margin: 0 0 0.85rem;
 }
 .issueline {
 border-top: 2.5px solid var(--rule);
@@ -744,6 +751,15 @@ a { color: var(--ink); text-decoration: none; }
 
 .ednote { font-size: 0.86em; line-height: 1.45; }
 .ednote p { margin: 0.4em 0; }
+
+.nameplate-stack > p > img,
+.nameplate-stack > p > svg {
+height: 0.92em;
+width: auto;
+max-width: none;
+margin: 0;
+display: block;
+}
 </style>
 </head>
 
@@ -755,18 +771,18 @@ a { color: var(--ink); text-decoration: none; }
 
 <div class="masthead">
 <div class="nameplate-row">
-<p><svg id="svg_0b19521388e087c488c6" role="img" viewBox="0 0 100 100" width="100" height="100">
-  <title>GS-NEWS mark: a seismograph trace inside a magnifying glass</title>
+<div class="nameplate-stack">
+<p><svg id="svg_f32a904bd3d1cab2f585" role="img" viewBox="0 0 100 100" width="100" height="100">
+  <title>GES-NEWS mark: a seismograph trace inside a magnifying glass</title>
   <line x1="66" y1="66" x2="80" y2="80" stroke="#16191d" stroke-width="8" stroke-linecap="round"></line>
   <circle cx="46" cy="46" r="28" fill="#fdfcfa" stroke="#16191d" stroke-width="3.5"></circle>
   <path d="M22,46 L28,46 L33,33 L40,60 L46,24 L52,60 L59,33 L64,46 L70,46" fill="none" stroke="#7a1f1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
 </svg></p>
-<section id="ges-news" class="nameplate nameplate-stack">
-<h1 class="nameplate">GES-NEWS</h1>
+<h1 class="nameplate" id="ges-news">GES-NEWS</h1>
+</div>
+</div>
 <div class="subname">
 <p>GEOSCIENCE, ENVIRONMENTAL SCIENCE, AND SUSTAINABILITY NEWS</p>
-</div>
-</section>
 </div>
 <div class="issueline">
 <p><span class="issue-left">Hofstra University</span><span class="issue-right">Geology, Environment and Sustainability</span></p>

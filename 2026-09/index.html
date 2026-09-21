@@ -518,19 +518,24 @@ padding: 1.5rem 1.1rem 2.5rem;
 
 .masthead { margin-bottom: 2.25rem; }
 
+
 .nameplate-row {
-font-size: clamp(2.75rem, 12vw, 4.25rem);
+font-size: clamp(2rem, 9vw, 4.25rem);
 display: flex;
-align-items: center;
 justify-content: center;
-gap: 0.24em;
-margin: 0.5rem 0 0.85rem; 
+margin: 0.5rem 0 0.35rem;
 }
 .nameplate-row p { margin: 0; } 
 .nameplate-stack {
-display: flex;
-flex-direction: column;
-align-items: center;
+position: relative;
+}
+.nameplate-stack > p { 
+position: absolute;
+right: 100%;
+top: 50%;
+transform: translateY(-50%);
+margin: 0 0.22em 0 0;
+line-height: 0;
 }
 h1.nameplate {
 font-size: inherit;
@@ -550,11 +555,13 @@ flex-shrink: 0;
 margin-left: 0.10em;
 }
 .subname {
-letter-spacing: 0.30em;
-font-size: 0.8rem;
+letter-spacing: 0.22em;
+font-size: 0.78rem;
+line-height: 1.5;
+text-align: center;
 text-transform: uppercase;
 color: var(--muted);
-margin: 0;
+margin: 0 0 0.85rem;
 }
 .issueline {
 border-top: 2.5px solid var(--rule);
@@ -744,6 +751,15 @@ a { color: var(--ink); text-decoration: none; }
 
 .ednote { font-size: 0.86em; line-height: 1.45; }
 .ednote p { margin: 0.4em 0; }
+
+.nameplate-stack > p > img,
+.nameplate-stack > p > svg {
+height: 0.92em;
+width: auto;
+max-width: none;
+margin: 0;
+display: block;
+}
 </style>
 </head>
 
@@ -755,13 +771,15 @@ a { color: var(--ink); text-decoration: none; }
 
 <div class="masthead">
 <div class="nameplate-row">
-<p><img role="img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+CiAgPHRpdGxlPkdTLU5FV1MgbWFyazogYSBzZWlzbW9ncmFwaCB0cmFjZSBpbnNpZGUgYSBtYWduaWZ5aW5nIGdsYXNzPC90aXRsZT4KICA8bGluZSB4MT0iNjYiIHkxPSI2NiIgeDI9IjgwIiB5Mj0iODAiIHN0cm9rZT0iIzE2MTkxZCIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI0NiIgY3k9IjQ2IiByPSIyOCIgZmlsbD0iI2ZkZmNmYSIgc3Ryb2tlPSIjMTYxOTFkIiBzdHJva2Utd2lkdGg9IjMuNSIvPgogIDxwYXRoIGQ9Ik0yMiw0NiBMMjgsNDYgTDMzLDMzIEw0MCw2MCBMNDYsMjQgTDUyLDYwIEw1OSwzMyBMNjQsNDYgTDcwLDQ2IgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdhMWYxZiIgc3Ryb2tlLXdpZHRoPSIzIgogICAgICAgIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K" class="namemark img-fluid"></p>
-<section id="ges-news" class="level1 nameplate nameplate-stack">
+<div class="nameplate-stack">
+<p><img role="img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+CiAgPHRpdGxlPkdFUy1ORVdTIG1hcms6IGEgc2Vpc21vZ3JhcGggdHJhY2UgaW5zaWRlIGEgbWFnbmlmeWluZyBnbGFzczwvdGl0bGU+CiAgPGxpbmUgeDE9IjY2IiB5MT0iNjYiIHgyPSI4MCIgeTI9IjgwIiBzdHJva2U9IiMxNjE5MWQiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iNDYiIGN5PSI0NiIgcj0iMjgiIGZpbGw9IiNmZGZjZmEiIHN0cm9rZT0iIzE2MTkxZCIgc3Ryb2tlLXdpZHRoPSIzLjUiLz4KICA8cGF0aCBkPSJNMjIsNDYgTDI4LDQ2IEwzMywzMyBMNDAsNjAgTDQ2LDI0IEw1Miw2MCBMNTksMzMgTDY0LDQ2IEw3MCw0NiIKICAgICAgICBmaWxsPSJub25lIiBzdHJva2U9IiM3YTFmMWYiIHN0cm9rZS13aWR0aD0iMyIKICAgICAgICBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==" class="namemark img-fluid"></p>
+<section id="ges-news" class="level1 nameplate">
 <h1 class="nameplate">GES-NEWS</h1>
+</section>
+</div>
+</div>
 <div class="subname">
 <p>GEOSCIENCE, ENVIRONMENTAL SCIENCE, AND SUSTAINABILITY NEWS</p>
-</div>
-</section>
 </div>
 <div class="issueline">
 <p><span class="issue-left">Issue 1 · September 2026</span><span class="issue-right">Hofstra University · Geology, Environment and Sustainability</span></p>
