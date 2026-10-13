@@ -767,6 +767,48 @@ max-width: none;
 margin: 0;
 display: block;
 }
+
+.livefig { margin: 0 0 1rem; }
+.livefig-frame {
+position: relative;
+border: 1px solid var(--ink);
+background: var(--ink);
+overflow: hidden;
+cursor: pointer;
+line-height: 0;
+}
+.livefig-still {
+display: block; width: 100%; height: auto;
+position: relative; z-index: 2;
+transition: opacity 0.38s ease;
+}
+.livefig video {
+position: absolute; inset: 0; z-index: 1;
+width: 100%; height: 100%; object-fit: cover;
+}
+.livefig[data-playing="true"] .livefig-still { opacity: 0; }
+.livefig-cue {
+position: absolute; left: 0; bottom: 0; z-index: 3;
+background: var(--accent); color: var(--paper);
+font-size: 0.68rem; letter-spacing: 0.1em; line-height: 1.4;
+text-transform: uppercase; padding: 0.32em 0.7em;
+transition: opacity 0.25s ease;
+}
+.livefig[data-playing="true"] .livefig-cue { opacity: 0; }
+.livefig-frame:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+.livefig-cue { opacity: 1 !important; }
+.livefig-still { transition: none; }
+}
+
+.byline {
+font-size: 0.92rem; color: var(--muted); font-style: italic;
+margin: -0.6rem 0 0.8rem;
+}
+.piece-footer {
+font-size: 0.9rem; color: var(--muted); font-style: italic;
+border-top: 1px solid var(--hair); margin-top: 1rem; padding-top: 0.5rem;
+}
 </style>
 </head>
 
@@ -798,10 +840,11 @@ display: block;
 <p>We check every application deadline directly with the organisation that offers it. If next year’s date has not been posted yet, we say so, instead of printing an old one that might already be closed. Campus event details come from the faculty members who run them.</p>
 <p>Nine issues a year, September to May.<br>
 Founding Editor: Dr. Antonios E. Marsellos. Co-Editor: Dr. J Bret Bennington.</p>
-<!-- next-issue: 2026-10-13 -->
-<p><strong>Next issue: Tuesday 13 October 2026.</strong> Items for it close on Friday 9 October.</p>
+<!-- next-issue: 2026-11-03 -->
+<p><strong>Next issue: Tuesday 3 November 2026.</strong> Items for it close on Friday 30 October.</p>
 <h2 id="issues" class="anchored">Issues</h2>
 <ul>
+<li><strong><a href="2026-10/index.html">Issue 2, October 2026</a></strong> (<a href="2026-10/GES-NEWS_2026-10.pdf">print version</a>)</li>
 <li><strong><a href="2026-09/index.html">Issue 1, September 2026</a></strong> (<a href="2026-09/GES-NEWS_2026-09.pdf">print version</a>)</li>
 </ul>
 <h2 id="subscribe" class="anchored">Subscribe</h2>
