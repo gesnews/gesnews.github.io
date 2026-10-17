@@ -738,6 +738,10 @@ a { color: var(--ink); text-decoration: none; }
 .colophon { font-size: 9.5pt; }
 }
 
+ul.issue-list { list-style: none; padding-left: 0; }
+ul.issue-list li { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.7rem; }
+img.issue-thumb { display: block; width: 64px; height: auto; border: 1px solid var(--rule); }
+
 @media (prefers-color-scheme: dark) {
 :root:not([data-theme="light"]) {
 --ink: #e9e6e1;
@@ -843,9 +847,9 @@ Founding Editor: Dr. Antonios E. Marsellos. Co-Editor: Dr. J Bret Bennington.<
 <!-- next-issue: 2026-11-03 -->
 <p><strong>Next issue: Tuesday 3 November 2026.</strong> Items for it close on Friday 30 October.</p>
 <h2 id="issues" class="anchored">Issues</h2>
-<ul>
-<li><strong><a href="2026-10/index.html">Issue 2, October 2026</a></strong> (<a href="2026-10/GES-NEWS_2026-10.pdf">print version</a>)</li>
-<li><strong><a href="2026-09/index.html">Issue 1, September 2026</a></strong> (<a href="2026-09/GES-NEWS_2026-09.pdf">print version</a>)</li>
+<ul class="issue-list">
+<li><a href="2026-10/index.html"><img class="issue-thumb" src="2026-10/GES-NEWS_2026-10_thumb.gif" alt="The pages of Issue 2, October 2026, in turn" width="64" height="83"></a><span><strong><a href="2026-10/index.html">Issue 2, October 2026</a></strong> <span style="white-space:nowrap">(<a href="2026-10/GES-NEWS_2026-10.pdf">print version</a>)</span></span></li>
+<li><a href="2026-09/index.html"><img class="issue-thumb" src="2026-09/GES-NEWS_2026-09_thumb.gif" alt="The pages of Issue 1, September 2026, in turn" width="64" height="83"></a><span><strong><a href="2026-09/index.html">Issue 1, September 2026</a></strong> <span style="white-space:nowrap">(<a href="2026-09/GES-NEWS_2026-09.pdf">print version</a>)</span></span></li>
 </ul>
 <p><a href="2026-10/index.html"><img id="issue-preview" alt="The four pages of Issue 2, October 2026, shown one after the other" style="max-width:100%;height:auto;border:1px solid #16191d"></a></p>
 <script>document.getElementById('issue-preview').src = '2026-10/GES-NEWS_2026-10.gif';</script>
